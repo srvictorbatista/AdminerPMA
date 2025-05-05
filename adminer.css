@@ -1,0 +1,1062 @@
+/*!
+ * == =================================================================================
+ * Pretty My Adminer (PMA) – Tema Escuro Profissional para Adminer versão 0.1
+ * == =================================================================================
+ *
+ * DESCRIÇÃO:
+ * -- ---------------------------------------------------------------------------------
+ * Pretty My Adminer (abreviado como PMA) é uma folha de estilo (CSS) dedicada 
+ * à personalização visual do Adminer, uma ferramenta GUI baseada na web para 
+ * gerenciamento de bancos de dados, encontrada em https://www.adminer.org.
+ * 
+ * Esta folha de estilo transforma a aparência padrão do Adminer no PhpMyAdmin. 
+ * O resultado é um "Dark Theme" profissional com suporte a SVGs e versão mobile, 
+ * menu sandwishe, fonte monoespaçada para leitura clara e fundo técnico que 
+ * valoriza a experiência visual sem comprometer a funcionalidade.
+ *
+ *
+ * COMPATIBILIDADE:
+ * -- ---------------------------------------------------------------------------------
+ * Projetado para oferecer compatibilidade ampla, o este tema foi testado com múltiplas 
+ * versões do Adminer, a partir (mas não se imitando) a série 5.x.x e anteriores, 
+ * garantindo total retrocompatibilidade com versões mais antigas. 
+ * Embora não haja imitações de uso, este projeto foi concebido para falantes da 
+ * lingua portuguesa no Brasil.
+ *
+ * ATENÇÃO: embora o tema funcione em versões mais antigas, recomenda-se fortemente 
+ * a utilização da versão mais recente do Adminer, conforme disponibilizado no site 
+ * oficial, por razões de segurança, desempenho e correção de bugs.
+ *
+ *
+ * COMO UTILIZAR:
+ * -- ---------------------------------------------------------------------------------
+ * 1. Baixe o arquivo adminer.css (Pretty My Adminer) no mesmo diretório do seu 
+ * Adminer.php. Toda a "magica" deve ocorrer automaticamente.
+ *
+ * bash:
+ * wget -O adminer.css https://exemplo.com/adminer.css 
+ *
+ * powershell:
+ * Invoke-WebRequest -Uri "https://github.com/srvictorbatista/AdminerPMA/adminer.css" -OutFile "adminer.css
+ *
+ * 2. Pronto! Desfrute de um visual escuro, moderno e insprado no PhpMyAdmin.
+ * 
+ *
+ * AUTOR:
+ * -- ---------------------------------------------------------------------------------
+ * Nome: 		Sr. Victor Batista
+ * GIT:			https://github.com/srvictorbatista
+ * Contato: 	https://t.me/LevyMac;
+ * 
+ *
+ * 
+ * REPOSITÓRIO / CONTRIBUIÇÕES:
+ * -- ---------------------------------------------------------------------------------
+ * GitHub: https://github.com/srvictorbatista/AdminerPMA
+ * Licença: MIT – Uso Livre sem limitações no estado em que se encontra, notada a autoria.
+ * 
+ * Contribuições são bem-vindas! Caso deseje melhorar o tema, adicionar variantes 
+ * (como diferentes paletas de cores), fique à vontade para abrir uma *issue* ou 
+ * *pull request* no repositório acima.
+ *
+ * -- ---------------------------------------------------------------------------------
+ * Licença MIT para uso livre no estado em que se encontra, preservada a autoria.
+ * == =================================================================================
+ */
+
+
+html {
+    --bg: #1E1E1E;
+    --fg: #2A2A2A;
+    --dim: #1A1D1F;
+}
+.jush {
+    --text-color: #4671a1;
+    --bg-color: #fff;
+    --php-color: #003;
+	--string-color: green;
+	--string-plain-color: #009F00;
+	--keyword-color: #a6a6ff;
+	--identifier-color: red;
+	--value-color: purple;
+	--number-color: #007F7F;
+	--attribute-color: teal;
+	--js-bg-color: #f0f0ff;
+	--css-bg-color: #ffffe0;
+	--php-bg-color: #fff0f0;
+	--php-sql-bg-color: #ffbbb0;
+}
+
+#logo{display:none;}
+body {
+  background: #1e1e1e;
+  color: #c0c0c0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+#version[rel~="noopener"]{
+	display:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus{outline:none;}
+
+#menu{margin-top: -10px;}
+
+body #menu h1::after {
+	content:"Tema:    Sr. Victor - PMA 0.1";
+	float: right;
+	margin:-22px 0px 0px 0px;
+	margin-left: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	right:15px;
+}
+#menu h1:hover::after{
+	color: #AAA;
+}
+
+#menu span.version{
+	position: relative;
+	left: 5px;
+	top: -24px;
+	z-index: -1;
+}
+#menu span.version::after {
+	content:"Versão.";
+	float: left;
+	margin:7px 8px 5px 90px;
+	font-size: 15px;
+}
+
+table.layout, table.layout tbody tr td, table.layout tbody tr th{
+	background:#222; border: none;
+}
+table.layout{}
+table.layout tbody{padding: 5px 195px;}
+
+#content:has(> form > table.layout) h2
+{max-width: 490px; margin-top:2px;} 
+#content:has(> form > table.layout) div
+{max-width: 512px;}
+#content:has(> form > table.layout) form 
+{max-width: 523px}
+
+form:has( table.layout){
+  margin-left: -20px; margin-top: -20px;
+  background: #222;
+  border:solid 1px #333;
+  padding: 5px;
+}
+form:has( table.layout) p{
+  text-align-last: right;
+  margin: 15px 10px 20px 0px;
+  font-size: 15px;
+}
+form:has( table.layout) p *[value="Entrar"]{
+  float: right;
+  padding: 15px 35px;
+  position: relative;
+  top: -18px;
+}
+
+/* Aparência do checkbox */
+input[type="checkbox"] {
+  -webkit-appearance: none; -moz-appearance: none; appearance: none;
+  width: 30px; height: 30px;
+  border-radius: 5px;
+  border: 2px solid #555;
+  background-color: #333;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-right: 10px;
+}
+input[type="checkbox"]:checked {
+  background-color: #3A6EA5; 
+  border-color: #3A6EA5;
+}
+input[type="checkbox"]:checked::after {
+  content: '✔';
+  transform: rotate(15deg);
+  margin-top: -30px; 
+  margin-left: 0px;
+  color:#DDD;
+  font-size: 50px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  background-color: none;
+  border-radius: 2px;
+}
+input[type="checkbox"]:hover {
+  border-color: none;
+}
+
+body #menu #h1 {
+  text-shadow:2px 4px 2px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  font-size: 32px;
+  font-weight:bold;
+  padding: 10px 10px 12px 50px;
+  display: inline-block;
+  height: 40px;
+  background-image: url("data:image/svg+xml, 	%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22146%20168%20155%20155%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20id%3D%22PREFIX%22%20class%3D%22PREFIX%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22mastros%22%20class%3D%22mastros%22%20fill%3D%22%23FF7428%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22mastro01%22%20d%3D%22M%20200.726%20170.799%20C%20200.884%20168.618%20204.124%20168.928%20204.282%20170.675%20L%20204.191%20313.371%20L%20200.382%20313.371%20L%20200.726%20170.799%20Z%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22mastro02%22%20d%3D%22M%20186.12%20171.549%20C%20186.176%20170.255%20188.911%20169.945%20188.928%20171.544%20C%20188.952%20173.714%20189.218%20312.256%20189.26%20313.693%20C%20189.283%20314.437%20186.085%20314.535%20186.085%20313.745%20C%20186.085%20312.038%20186.028%20173.68%20186.12%20171.549%20Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22mastro03%22%20d%3D%22M%20163.221%20302.794%20C%20163.111%20301.125%20157.355%20209.88%20157.281%20208.514%20C%20157.243%20207.807%20158.813%20207.606%20158.865%20208.368%20C%20159.061%20211.252%20164.188%20298.071%20164.604%20302.701%20C%20164.645%20303.161%20163.25%20303.228%20163.221%20302.794%20Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22casco%22%20d%3D%22M%20150.092%20324.741%20C%20150.092%20324.741%20147.531%20309.57%20147.796%20310.573%20C%20147.942%20310.353%20262.152%20299.268%20262.07%20299.218%20C%20261.957%20299.147%20294.393%20281.146%20297.94%20279.083%20C%20298.82%20278.571%20266.541%20305.993%20264.929%20307.53%20C%20262.83%20309.532%20255.701%20324.741%20255.701%20324.741%20L%20203.189%20324.741%20L%20150.092%20324.741%20Z%22%20class%3D%22casco%22%20fill%3D%22%2323475C%22%20stroke%3D%22%2323475C%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22cabine%22%20d%3D%22M%20153.911%20310.785%20C%20154.35%20310.492%20157.269%20301.378%20157.269%20301.378%20L%20182.683%20302.038%20L%20182.515%20307.617%20C%20182.515%20307.645%20153.471%20311.078%20153.911%20310.785%20Z%22%20class%3D%22cabine%22%20fill%3D%22%2323475C%22%20stroke%3D%22%2323475C%22%20stroke-width%3D%222%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22paraPeito%22%20transform%3D%22matrix%280.073238%2C%200%2C%200%2C%200.073238%2C%20145.331393%2C%20159.955752%29%22%20class%3D%22paraPeito%22%20fill%3D%22%2327B1EA%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20style%3D%22transform%3A%20none%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22paraPeito01%22%20d%3D%22M%2045.888%202092.135%20C%2045.684%202092.13%2043.379%202069.016%2043.007%202065.975%20C%2063.007%202063.975%20442%202026%20853%201984%20L%201601%201908%20L%201998.8%201683.199%20C%201960.815%201714.208%201596.509%201965.843%201596.328%201965.977%20C%201596.01%201966.201%201239%202000%20840%202029%20C%20441%202057%2051.667%202092.268%2045.888%202092.135%20Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22nivel%22%20transform%3D%22matrix%280.073238%2C%200%2C%200%2C%200.073238%2C%20145.331393%2C%20159.955752%29%22%20class%3D%22nivel%22%20fill%3D%22%230f79A4%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20style%3D%22transform%3A%20none%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22nivel01%22%20d%3D%22M%201515%202151%20C%201515%202151%2062.741%202189.971%2063.207%202190.513%20C%2058.815%202153.905%2045.652%202091.299%2045.787%202091.286%20C%2070.804%202088.887%20441%202057%20840%202028%20C%201239%202000%201582.085%201965.427%201593.085%201965.427%20C%201604.085%201965.427%202011.703%201673.973%202010.734%201675.174%20C%202013.734%201677.174%201601.199%202011.984%201600.862%202011.825%20L%201515%202151%20Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3Cg%20transform%3D%22matrix%280.073238%2C%200%2C%200%2C%200.073238%2C%20145.331393%2C%20159.955752%29%22%20id%3D%22velas%22%20class%3D%22velas%22%20fill%3D%22%2323475C%22%20stroke%3D%22%2323475C%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22velasBaixo%22%20d%3D%22M%20261.089%201820.692%20C%20260.578%201820.826%20260%201663%20260%201663%20L%20138%201686%20C%2071%201699%2015%201708%2014%201707%20C%2012%201706%2015%201687%2020%201665%20C%2052%201523%2056%201239%2029%20948%20C%2023%20883%2020%20826%2022%20820%20C%2024%20812%20107%20871%20185%20938%20C%20196%20947%20243%20986%20290%201024%20L%20375%201092%20L%20385%20955%20C%20385%20955%20714.909%20904.085%20785.649%20903.359%20C%20849.078%20902.709%201125%20945%201125%20945%20L%201128%201113%20C%201129%201205%201127%201280%201122%201280%20C%201117%201280%20812.02%201239.543%20774.011%201239%20C%20755.283%201238.733%20580%201249%20581%201259%20C%20581.114%201261.886%20615.465%201311.452%20632.117%201329.898%20C%20633.725%201331.679%20768.038%201305.962%20776.706%201306.465%20C%20784.245%201306.903%201268.971%201371.394%201277.971%201377.394%20C%201278.969%201377.893%201267.556%201820%201267.53%201820%20C%201257.53%201820%201154%201806%201045%201789%20C%20825%201756%20769.873%201749%20590%201768%20C%20447.416%201783.061%20282.062%201815.18%20261.089%201820.692%20Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22velaAlto01%22%20d%3D%22M%20484.912%20487.456%20L%20490%20251%20C%20490%20251%20750.333%20200.006%20786.494%20202.103%20C%20822.494%20204.191%201040%20242%201040%20242%20C%201040%20242%201031.4%20481.867%201038.088%20478.304%20C%201042.501%20475.953%20810.448%20439.809%20781.075%20439.647%20C%20745.16%20439.449%20484.912%20487.456%20484.912%20487.456%20Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22velaAlto02%22%20d%3D%22M%20450%20852%20L%20450%20573%20C%20450%20573%20713.586%20531.93%20780.261%20532.982%20C%20836.536%20533.87%201090%20563%201090%20563%20L%201084.912%20850.165%20C%201076.432%20842.986%20821.886%20811.937%20783.708%20809.772%20C%20750.729%20809.841%20450%20852%20450%20852%20Z%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3Cg%20transform%3D%22matrix%280.073238%2C%200%2C%200%2C%200.073238%2C%20142.60747%2C%20158.477663%29%22%20id%3D%22trivela%22%20class%3D%22trivela%22%20%20fill%3D%22%23FF7428%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22trivela01%22%20d%3D%22M%201160%201666%20C%201160%201662%201305.887%201198.973%201303%201045%20C%201295.042%20620.581%201160.502%20490.67%201054%20411%20C%20977.077%20353.458%20932.683%20327.887%201063%20351%20C%201193.317%20374.113%201307.174%20441.959%201373.109%20506.412%20C%201374.787%20508.052%201479.246%20690.027%201491%20865%20C%201509.639%201142.46%201473.125%201426.252%201479%201408%20C%201483%201406%201570.944%201323.095%201773.859%201324.127%20C%201857.858%201324.554%201913.934%201336.983%201914%201338%20C%201915.055%201354.132%201951%201552%201947%201556%20C%201945%201558%201923%201552%201899%201541%20C%201780%201489%201583%201488%201429%201539%20C%201335%201569%201160%201670%201160%201666%20Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22trivela02%22%20d%3D%22M%202066%201323%20C%202012.111%201310.948%201737.101%201211.457%201531.62%201329.665%20C%201545.62%201284.665%201562%201033%201551%20930%20C%201532%20759%201509.095%20657.746%201434.095%20505.746%20C%201397.095%20428.746%201351%20355%201336%20331%20C%201321%20308%201311%20285%201314%20282%20C%201323%20273%201597.738%20424.331%201641.281%20529.155%20C%201644.67%20526.283%201686.849%20648.351%201695.966%20793.283%20C%201709.124%201002.441%201682%201200.12%201684%201178%20C%201686%201155.88%201915.207%201089.412%202004.458%201117.688%20C%202005.989%201118.173%202011%201102%202045%201240%20C%202054%201276%202076.188%201325.279%202066%201323%20Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22trivela03%22%20d%3D%22M%201745%201091.984%20C%201737%201094.984%201728.161%201096.74%201728.386%201095.89%20C%201775.087%20919.756%201734.008%20472.852%201603%20306%20C%201577.314%20273.286%201541.567%20250.016%201544.567%20247.016%20C%201551.567%20240.016%201707.614%20295.386%201811.614%20382.386%20C%201996.614%20537.386%202052%20631%202103%20760%20C%202134%20839%202155.574%20971.121%202160%201052%20C%202164.205%201128.827%202165.008%201113.803%202150.008%201107.803%20C%202104.008%201089.803%202060.803%201062.181%201972.803%201057.181%20C%201881.803%201051.181%201826%201060.984%201745%201091.984%20Z%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  background-position: 8px 12px;
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-color:none;
+  margin-right: 8px;
+  vertical-align: middle;
+  border:solid 2px #EEE;
+  border:none;
+}
+body #menu h1:hover{
+	background-color: #00033D20;
+}
+
+#lang{
+    width: 100%;
+    background-color: #0F0F0F !important;
+    top: 0;
+    left: 0;    
+    position: fixed;
+    z-index: 1;
+    height: 40px;
+}
+.logout span{display:none;}
+body .logout, body #content #breadcrumb{
+    position: fixed;
+    z-index: 2;
+}
+#logout{
+	background-color: #FF7428BB;
+	padding:12px 25px;
+	margin-top:-2px; 
+}
+
+thead td, thead th{
+	background-color: #30333F
+}
+
+.odd td,
+#breadcrumb,
+#logins a, #tables a, #tables span, 
+body * > h1{
+	background: #20202140;
+}
+tbody tr:hover td, tbody tr:hover th{
+	background:#DF4B4B10
+}
+
+h2, h3, h4 {
+    color: #2225A54A;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    background: #b096C34A;
+
+    font-size: 150%;
+    margin: 0 0 20px -18px;
+    padding: .8em 1em;
+    border-bottom: 1px solid #000;
+    color: #000;
+    font-weight: normal;
+    background: #30333F;
+}
+
+a:visited, a {
+    color: #9C9CFFA6;
+}
+.icon {
+    width: 18px;
+    height: 18px;
+    background: none;
+    border: none; 
+}
+
+* a:hover, * .icon:hover{
+	color:#AAA !important;
+	background-color: #6B6B6B20;
+}
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    margin-right: 0px;
+    border-top: 20px solid rgba(255, 255, 255, .7) !important;
+    border-image: linear-gradient(rgb(33 33 33), #323543) 100% 0;
+}
+.footer > div {
+    background: #30333F;
+    padding: 0 0 .5em;
+}
+
+
+/* Menu lateral */
+#menu {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 220px;
+  bottom: 0;
+  background: #181c1f;
+  overflow-y: auto;
+  border-right: 1px solid #2f2f2f;
+  padding: 10px;
+}
+
+#menu a {
+  display: block;
+  padding: 8px 10px;
+  color: #c0c0c0;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+#menu a:hover {
+  background: #2a2f35;
+  color: #f0f0f0;
+}
+
+/* Conteúdo */
+#content {
+  margin-left: 240px;
+  padding: 20px;
+  min-width: calc(100vw - 300px);
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #222;
+  color: #d0d0d0;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+th {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+tr:nth-child(even) {
+  background: #1f1f1f;
+}
+
+tr:hover {
+  background: #2b3035;
+}
+
+.odds tbody tr:nth-child(2n) {
+    background: var(--fg);
+}
+
+/* Formulários */
+input, select, textarea {
+  background: #2b2f33;
+  color: #ccc;
+  border: 1px solid #444;
+  padding: 6px;
+  border-radius: 3px;
+}
+
+input[type=file]{
+  background-color: #3A6EA5; 
+  color: #f0f0f0; 
+  border: none;
+  padding: 8px 16px;
+  margin: 10px 0;
+  border-radius: 6px; 
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.2s;
+} input[type=file]:hover {
+  background-color: #2F5A88;
+  transform: scale(1.05);
+} input[type=file]:active {
+  background-color: #254C75; 
+  transform: scale(0.98);
+}
+
+input[type=submit], button {
+  background-color: #3A6EA5;
+  color: #f0f0f0;
+  border: none;
+  padding: 6px 12px;
+  margin: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover, button:hover {
+  background-color: #305c8c;
+}
+
+select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='gray' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 16px;
+
+  border: 1px solid #444;
+  padding: 8px;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Scrollbar escura - WebKit (Chrome, Edge, Safari) */
+select::-webkit-scrollbar {
+  width: 10px;
+}
+select::-webkit-scrollbar-track {
+  background: #2A2A2A;
+}
+select::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 6px;
+  border: 2px solid #2A2A2A;
+}
+select {
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2A2A2A;
+}
+
+label{
+  white-space: nowrap;
+}
+
+/* Mensagens */
+.message{
+	background-color: #EFEFEFD0;
+	margin: 0px 0px 0px -20px;
+	font-weight: bold;
+}
+.error {
+	margin: 0px 0px 0px -20px;
+	font-weight: bold;
+}
+
+div.message{
+  background: #2F4F4F;
+  color: #CFF;
+  padding: 10px 0px 10px 20px;
+  border: 1px solid #3A6;
+  position: relative;
+  top:-20px;left:0px;width: 100%
+}
+
+div.error {
+  background: #4F2F2F;
+  color: #FCC;
+  padding: 10px 0px 10px 20px;
+  border: 1px solid #A33;
+  position: relative;
+  top:-20px;left:0px;width: 100%
+}
+
+/* Cabeçalhos */
+h2, h3, h4 {
+  color: #f0f0f0;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+/* ==== Ícones SVG inline (como background-image base64) ==== */
+input[value="Apagar"],
+input[value="Deletar"],
+input[value="Salvar"],
+input[value="Executar"], /* Importat / Enviar / Submeter */
+
+input[value="Enviar"],
+input[value="Exportar"],
+input[value="Editar"],
+input[value="Selecionar"],
+input[value="Otimizar"],
+input[value="Vacuum"],
+input[value="Truncar"],
+input[value="Mover"],
+input[value="Clonar"],
+input[value="Procurar"]{
+  padding-left: 30px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+}
+
+input[value="Apagar"], input[value="Deletar"]{
+  background-image: url("data:image/svg+xml,  %3Csvg%20fill%3D%22%23FFFFFFDD%22%20viewBox%3D%220%200%201000%201000%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20stroke%3D%22%23ffffff%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fg%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%3Cpath%20d%3D%22M767%20336H233q-12%200-21%209t-9%2021l38%20505q1%2013%2012%2021.5t30%208.5h434q18%200%2029-8.5t13-21.5l38-505q0-12-9-21t-21-9zM344%20841q-10%200-18-9t-8-21l-26-386q0-12%209-20.5t21-8.5%2021%208.5%209%2020.5l18%20386q0%2012-7.5%2021t-18.5%209zm182-31q0%2013-7.5%2022t-18.5%209-18.5-9-7.5-22l-4-385q0-12%209-20.5t21-8.5%2021%208.5%209%2020.5zm156%201q0%2012-8%2021t-18%209q-11%200-18.5-9t-7.5-21l18-386q0-12%209-20.5t21-8.5%2021%208.5%209%2020.5zm101-605l-179-30q-12-2-15-15l-8-33q-4-20-14-26-6-3-22-3h-90q-16%200-23%203-10%206-13%2026l-8%2033q-2%2013-15%2015l-179%2030q-19%203-31.5%2014.5T173%20249v28q0%209%206.5%2015t15.5%206h610q9%200%2015.5-6t6.5-15v-28q0-17-12.5-28.5T783%20206z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+input[value="Editar"]{
+  background-image: url("data:image/svg+xml,%3Csvg fill='%239CF' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zm3 1.92l-.92-.92 9.06-9.06.92.92L6 19.17zM20.71 7.04a1.003 1.003 0 0 0 0-1.42l-2.34-2.34a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.84-1.82z'/%3E%3C/svg%3E");
+}
+input[value="Salvar"]{
+ background-image: url("data:image/svg+xml,   %3Csvg fill='%239CF' height='20px' width='20px' version='1.1' id='Layer_1' xmlns='http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' xmlns%3Axlink='http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink' viewBox='0 0 512 512' xml%3Aspace='preserve' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C%2Fg%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C%2Fg%3E%3Cg id='SVGRepo_iconCarrier'%3E %3Cg%3E %3Cg%3E %3Cg%3E %3Cpath d='M506.513%2C98.709L413.291%2C5.486C409.78%2C1.974%2C405.014%2C0%2C400.047%2C0H385.77c-3.448%2C0-6.244%2C2.796-6.244%2C6.244v151.114 c0%2C10.345-8.387%2C18.732-18.732%2C18.732H151.196c-10.345%2C0-18.732-8.387-18.732-18.732V6.244c0-3.448-2.796-6.244-6.244-6.244 H18.732C8.387%2C0%2C0%2C8.387%2C0%2C18.732v474.537C0%2C503.613%2C8.387%2C512%2C18.732%2C512h474.537c10.345%2C0%2C18.732-8.387%2C18.732-18.732V111.954 C512%2C106.987%2C510.027%2C102.221%2C506.513%2C98.709z M400.554%2C410.226c0%2C10.345-8.387%2C18.732-18.732%2C18.732H130.178 c-10.345%2C0-18.732-8.387-18.732-18.732V263.094c0-10.345%2C8.387-18.732%2C18.732-18.732h251.644 c10.345%2C0%2C18.732%2C8.387%2C18.732%2C18.732V410.226z'%3E%3C%2Fpath%3E %3Cpath d='M176.172%2C126.138h159.647c3.449%2C0%2C6.244-2.796%2C6.244-6.244V6.244c0-3.448-2.796-6.244-6.244-6.244H176.172 c-3.448%2C0-6.244%2C2.796-6.244%2C6.244v113.65C169.928%2C123.342%2C172.724%2C126.138%2C176.172%2C126.138z M275.346%2C46.27 c0-10.345%2C8.387-18.732%2C18.732-18.732s18.732%2C8.387%2C18.732%2C18.732v33.598c0%2C10.345-8.387%2C18.732-18.732%2C18.732 s-18.732-8.387-18.732-18.732V46.27z'%3E%3C%2Fpath%3E %3Cpath d='M318.413%2C317.93H193.586c-10.345%2C0-18.732%2C8.387-18.732%2C18.732s8.387%2C18.732%2C18.732%2C18.732h124.828 c10.345%2C0%2C18.73-8.387%2C18.73-18.732S328.758%2C317.93%2C318.413%2C317.93z'%3E%3C%2Fpath%3E %3C%2Fg%3E %3C%2Fg%3E %3C%2Fg%3E %3C%2Fg%3E%3C%2Fsvg%3E");
+ padding-left: 30px !important;
+}
+input[value="Executar"]{
+/* Sem icone aqui */ padding:0px;
+}
+input[value="Exportar"] {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%239CF' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 20h14v-2H5v2zm7-18L5.33 9h5v6h4V9h5L12 2z'/%3E%3C/svg%3E");
+}
+input[value="Selecionar"] {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%239CF' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 11l3 3L22 4l-1.41-1.41L12 12.17l-1.59-1.59L9 11zm-4 2l3 3L6.41 18.59 3 15.17l1.41-1.42L5 13z'/%3E%3C/svg%3E");
+}
+input[value="Otimizar"] {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%239CF' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19.14 12.936c.036-.3.06-.607.06-.936s-.024-.636-.07-.94l2.037-1.58a.5.5 0 0 0 .12-.64l-1.928-3.34a.5.5 0 0 0-.61-.22l-2.4.96a7.034 7.034 0 0 0-1.627-.94l-.36-2.54A.5.5 0 0 0 14 2h-4a.5.5 0 0 0-.5.42l-.36 2.54a7.034 7.034 0 0 0-1.627.94l-2.4-.96a.5.5 0 0 0-.61.22L2.71 8.84a.5.5 0 0 0 .12.64l2.037 1.58c-.046.304-.07.61-.07.936s.024.636.07.94L2.83 14.52a.5.5 0 0 0-.12.64l1.928 3.34a.5.5 0 0 0 .61.22l2.4-.96c.5.38 1.05.697 1.63.94l.36 2.54a.5.5 0 0 0 .5.42h4a.5.5 0 0 0 .5-.42l.36-2.54c.58-.243 1.13-.56 1.63-.94l2.4.96a.5.5 0 0 0 .61-.22l1.928-3.34a.5.5 0 0 0-.12-.64l-2.037-1.58zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6z'/%3E%3C/svg%3E");
+}
+input[value="Vacuum"] {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%239CF' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 21h14v-2H5v2zm11.5-6.5l1.09 1.09-4.5 4.5-1.09-1.09 4.5-4.5zM11 11l4.5 4.5-1.09 1.09L9.91 12.09 11 11z'/%3E%3C/svg%3E");
+}
+input[value="Truncar"] {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%239CF' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 3v1H4v2h16V4h-5V3h-6zm-2 6v11c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V9H7z'/%3E%3C/svg%3E");
+}
+input[value="Mover"] {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%239CF' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5-5 5 5h-3v4h-4v-4H7zm10 4l-5 5-5-5h3v-4h4v4h3z'/%3E%3C/svg%3E");
+}
+input[value="Clonar"] {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%239CF' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v16h13a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 18H8V7h11v16z'/%3E%3C/svg%3E");
+}
+input[value="Procurar"] {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%239CF' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5L20.49 19l-5-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
+}
+
+
+fieldset{
+	border: 1px solid #99999942;
+	border-radius: 3px;
+}
+
+form:has( table.layout) p{
+	top: 60px;
+}
+
+form:has( table.layout) p *[type="submit"] {
+    float: right;
+    margin: 8px 0px 0px 20px;
+    padding: 15px 35px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+/*******************************************************************************************************/
+/* O trecho a seguir é responsável pela exibição mobile **/
+
+/* ################################################################## 
+	v.5+ - Este bloco foi criado para garantir e compatibilidade com 
+	versões superiores a 4.9x do Adminer. */
+@media (max-width: 800px){
+	.js .foot{ display: inline-block; }
+	.js .logout{ margin: 0 !important; top: 90px !important; background-color: transparent; box-shadow: none; }
+	.js #logout{ margin: 0px !important; }
+	.js #content:has(> form > table.layout) h2{ margin-top: 50px; }
+	.js #menu { min-width: 50px !important;}
+	.js .jush-autocomplete { position: fixed; max-width: 100vw; max-height: 100vh; left: auto !important; overflow: auto; box-sizing: border-box; z-index: 0; font: 18px / 22.5px monospace; inset: auto auto auto 0; }
+	body #content #breadcrumb {left: auto !important; }
+	#content {padding: 0px 0px 0px 0px; margin-left: 20px !important; }
+}
+/* ################################################################## */
+
+
+
+@media only screen and (max-device-width: 1880px){
+
+  /* ===== Reset geral ===== */
+  html * {
+    padding: 0px;
+    margin:0px;
+    max-width: calc(100vw - 40px);
+    font-size: 18px;
+  }
+  
+  /* ===== Cabeçalho ===== */
+  body > h1:first-of-type {
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+  }
+  body > h1:first-of-type::before {
+    display: none; /* esconde ícone no mobile */
+  }
+  
+  /* ===== Menu lateral vira topo ===== */
+  #menu {
+    position: relative;
+    top: -50px;
+    left: 0;
+    width: auto !important;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    padding-top: 10px;
+    border-right: none;
+    transition: height 0.6s ease;
+    padding-right: 30px;
+    height: 0px;
+    overflow: hidden;
+  }
+  #menu a {
+    flex: 1 1 50%;
+    padding: 8px;    
+    font-size: 30px;
+  }
+
+  #menu	h1{  	
+  	border-bottom:none;
+  	margin-top: 50px;
+  	width: 100vw;
+  }
+
+
+  
+  /* ===== Breadcrumb e logout ===== */
+  .logout, #content #breadcrumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 100px;
+  }
+
+body #content #breadcrumb {
+    position: fixed;
+    z-index: 2;
+    left: auto;
+    top: 8;
+}
+
+.logout{
+  position: fixed;
+  top: 85px;
+  left: calc(100vw - 95px);
+  float: right;
+  margin-right: 0px;
+  z-index:4 !important;
+}
+#logout{
+	font-size:15px;
+}
+
+#breadcrumb {
+	background-color: #000000;
+	padding: 0px 28px 16px 10px;
+	z-index: 9;
+	width: 100%;
+	height: 60px;
+	overflow-x: auto;
+	white-space: normal;
+}
+
+.links a {
+  display: block; 
+  width: calc(100vw - 60px);
+  padding: 16px 10px;
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  box-shadow: 2px 2px 2px 3px #00000066;
+  transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+  background-color: #3A6EA56B;
+  cursor:#FFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+
+body #menu {
+top: 0;
+overflow-y: hidden;
+}
+
+body #menu h1:hover{
+	background-color: #000;
+	margin-top: 50px;
+}
+
+#menu h1{position: fixed; background-color: #333; top:15px; left: 0px; z-index:3; padding: 15px 30px 15px 10px; min-height: 80px;}
+
+#menu form{padding-top: 180px;}
+
+#menu:has(.links) #h1{
+	background-position: 0px 0px;
+    background-size: 60px;
+    padding-left: 65px;
+}
+
+/* Controla ação do sandwish */
+#menu:has(.links) h1::before {
+  content: "\2630";      /* Unicode U+2630 = ☰ */
+  font-size: 2.1em; 
+  display: inline-block;
+  vertical-algn: middle;
+  cursor: pointer;
+  color: #FFFFFFAA;
+  margin:0px 0px 0px 10px;
+  padding-right: 10px;
+  float:left;
+}
+
+/* ONLY quando o ícone (o próprio h1) for hover */
+#menu:has(.links):hover{
+  height: 80vh; 
+  pointer-events: auto;
+  background-color: #000;
+  padding-right: 35px;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 1;
+}
+  /* Fundo interceptador de cliques indesejados */ 
+  #menu:has(.links):hover::before { content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 80vh; background: transparent; z-index: -1; pointer-events: auto; }
+
+
+#menu p, #menu ul{border-bottom:solid 2px #222; width: 100%;}
+#menu #dbs select{
+	padding: 10px 20px;
+	width: 100%;
+	margin-bottom: 40px;
+}
+#menu::after {
+  content: " ▼   Toque fora do menu, para fechá-lo.   ▼";
+  color: #FFFFFFAA;
+  font-style: italic;
+  font-size: 18px;
+  transform: translate(5%, 14px); /* Ajuste fino da posição */
+  z-index: 2;
+  white-space: nowrap;
+  position: relative;
+}
+
+
+  
+  /* ===== Conteúdo ===== */
+  #content {
+  	position: absolute;
+  	margin-top: 190px;
+    margin-left: 0;
+    padding: 5px -5px 0px 0px;
+    width: 100vw;
+  }
+  
+  /* ===== Formulários ===== */
+  form, form:has(table.layout) {
+    margin: 10px 0px;
+    padding: 0px 0px 10px 5px;
+  }
+  form:has(table.layout) td:nth-child(2){ /* apenas a segunda coluna */
+  	max-width: 280px;
+  	padding: 0px;
+  }
+  form:has(table.layout) label{
+  	font-size: 15px;
+  }
+
+  input, select, textarea, button {
+    width: auto;
+    max-width: 200px;
+    box-sizing: border-box;
+    font-size: 26px;
+    align-self: center;
+    padding: 5px 16px;
+    border-radius: 6px;
+  }
+
+
+select {
+  padding: 7px 26px 7px 15px;
+  font-size: 26px;
+  color: #999;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='gray' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 16px;
+}
+
+
+
+  input[type="search"]{
+  	margin: 0px 0px 0px 10px;  
+  	padding: 10px;
+  	max-width: calc(100% - 180px);
+  }
+
+
+
+  input[type="submit"], button {
+    padding: 12px;
+    margin: 20px 10px;
+    text-align-last: auto;
+  }
+  
+  input[name="webfile"]{
+	min-width: calc(100vw - 75px);
+  }
+
+  
+  /* ===== Checkboxes ===== */
+  input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+  }
+  input[type="checkbox"]:checked::after {
+    font-size: 35px;
+    margin-top: -22px;
+    margin-left: -5px;
+    transform: rotate(-5deg);
+  }
+
+
+  
+  /* ===== Rodapé ===== */
+  .footer {
+    border-top-width: 10px;
+  }
+  .footer > div {
+    padding: 0.5em 10px;
+  }
+  
+  /* ===== Ícones em links ===== */
+  a[href*="delete"]::before,
+  a[href*="edit"]::before,
+  a[href*="create"]::before {
+    width: 14px;
+    height: 14px;
+    background-size: 14px 14px;
+  }
+  
+  /* ===== Textos principais ===== */
+  h2, h3, h4 {
+    font-size: 1.2em;
+    margin: 20px 0 10px;
+    padding: 0.6em;
+  }
+  
+  /* ===== Ajuste específico de versão/título ===== */
+  #menu span.version { float: left; top: 0px; margin: 50px 8px 0px -38px; }
+  #menu span.version::after { margin: -3px 5px -15px 50px; font-size: 15px; }
+  #menu h1::after { margin: 50px -10px -15px 0px !important; }
+  #menu span.version, #menu h1::after, #menu span.version{ position:absolute;top: 20px;}
+
+  /* Se Menu ativo*/
+  #menu:has(.links) span.version{
+  	position: absolute; top: 75px; margin:10px;
+  }
+  #menu:has(.links) h1::after{
+  	position: absolute;
+  	right: 25px;
+  	margin:0px 0px 0px 0px; top:35px;
+  	padding: 0px;
+  }
+  #menu:has(.links) #h1{ 
+  	margin-bottom: -13px !important;
+  	float:left;
+  }
+
+  #lang{
+  	    display: block;
+  	}
+  #lang select{
+  	font-size: 15px;
+  }
+
+
+
+
+  #form p:nth-child(1) .sqlarea span,.sqlarea{
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	overflow-x: hidden;
+	resize: vertical;
+  }
+  #form p:nth-child(1) .sqlarea span,.sqlarea{
+	max-width: calc(100vw - 55px) !important;
+	width: calc(100vw - 55px) !important;
+	color:#B5CFFC;
+	background: #00000A70;
+  }
+  #form p:nth-child(1) > pre[contenteditable="true"]{
+	border: solid 2px #666 !important;
+	border-radius: 8px;
+  }
+  #form p:nth-child(1) > {
+	border: solid 2px #999 !important;
+  }
+
+
+  
+	/* ===== Tabelas ===== */
+	table {
+	  display: block;
+	  width: 100%;
+	  overflow-x: auto;
+	  -webkit-overflow-scrolling: touch;
+	}
+	th, td {   
+	  padding: 18px 5px;
+	}
+
+	/* Estilo base da tabela */
+	.scrollable table {
+	  width: 100%;
+	  border-collapse: collapse;
+	  background-color: #222;
+	  color: #AAA;
+	}
+
+	.scrollable table th, td {
+	  padding: 12px 16px;
+	  text-align: left;
+	  border: 1px solid #333;
+	  font-size: 15px;
+	}
+
+	/* Estilo para cabeçalhos */
+	.scrollable table th {
+	  background-color: #222;
+	  color: #f5f5f5;
+	  font-weight: bold;
+	}
+
+	  /* Estilo mobile */
+	  .scrollable table, .scrollable table thead, .scrollable table tbody, .scrollable table th, .scrollable table td, .scrollable table tr {
+	    display: block;
+	  }
+
+	  .scrollable table thead {
+	    /*display: none; /**/
+	  }
+
+	  .scrollable table th{
+	    white-space: normal;
+	    padding: 20px !important;
+	    font-size: 1.2em;
+	  }
+
+	  .scrollable table tr {
+	    background-color: #222;
+	    border: 1px solid #444;
+	    margin-bottom: 12px;
+	    border-radius: 8px;
+	    padding: 12px;
+	    box-shadow: 0 2px 6px #000000AA;
+	  }
+
+	  .scrollable table td {
+	    position: relative;
+	    padding-left: 60px;
+	    border: none;
+	    border-bottom: 1px solid #444;
+	    color: #999;
+	    max-width: 100%;
+
+	    word-wrap: break-word;
+	    word-break: break-word;
+	    white-space: normal !important;
+	  }
+
+	  .scrollable table tr td select:not(:only-child){ /* Apenas se o select não estiver sozinho */
+	  	margin: 10px 18px 5px -50px;
+	  }
+
+	  .scrollable table .odd{
+	  	background-color: #191919 !important;
+	  }
+
+	  .scrollable table tr .column{
+	  	background-color: #292957 !important;
+	  	border-radius: 3px;
+	  }
+	  .scrollable .checkable .checked th, .scrollable .checkable .checked th .column{
+	  	background-color: #292957 !important;
+	  }
+
+	  .scrollable table .checked, .scrollable table .checked td{
+	  	background: #0A0A1E !important;
+	  	color:#EEE !important;
+	  	font-size: 1.019em;
+	  }
+
+	  .scrollable table td::before {
+	    position: absolute;
+	    top: 10px;
+	    left: 12px;
+	    width: 45%;
+	    padding-right: 10px;
+	    white-space: nowrap;
+	    font-weight: bold;
+	    color: #888;
+	    content: attr(data-label);
+	  }
+
+	  /* Ajustar o checkbox e link de editar */
+	  .scrollable table td:first-child {
+	    padding-left: 16px;
+	  }
+	  .scrollable table td:first-child::before {
+	    content: '';
+	  }
+
+	  .scrollable table a {
+	    color: #7ABAFF;
+	    text-decoration: none;
+	    font-size: 1.5em;
+	  }
+
+	  .scrollable table a:hover {
+	    color: #AACCFF;
+	    text-decoration: underline;
+	  }
+
+	  .scrollable table input[type="checkbox"] {
+	    transform: scale(1.4);
+	    margin-right: 10px;
+	    cursor: pointer;
+	  }
+
+    /* Mensagens */
+	.message, .error{
+		background-color: #EFEFEFD0;
+		margin: 0px 0px 0px -20px !important;
+		font-weight: bold;
+		top:0px !important; left:20px !important;
+		width: 93% !important;
+	}
+
+
+
+}
