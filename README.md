@@ -19,10 +19,10 @@ Este projeto foi concebido para falantes da língua portuguesa no Brasil.
 
 1. Baixe o arquivo **adminer.css** (Pretty My Adminer) e coloque-o no mesmo diretório do seu **Adminer.php**. A "mágica" ocorrerá automaticamente. Se preferir (em seu terminal), use o comando a seguir, a partir da pasta desejada:
 **bash:**  
-`` wget -O adminer.css https://github.com/srvictorbatista/AdminerPMA/adminer.css``
+`` wget -O adminer.css https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css``
 
 	**powershell:**  
-	`` Invoke-WebRequest -Uri "https://github.com/srvictorbatista/AdminerPMA/adminer.css" -OutFile "adminer.css"``
+	`` Invoke-WebRequest -Uri "https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css" -OutFile "adminer.css"``
 
 
 3. **Pronto!** Desfrute de um visual escuro, moderno e inspirado no PhpMyAdmin.

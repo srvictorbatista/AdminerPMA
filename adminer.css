@@ -34,10 +34,10 @@
  * Adminer.php. Toda a "magica" deve ocorrer automaticamente.
  *
  * bash:
- * wget -O adminer.css https://exemplo.com/adminer.css 
+ * wget -O adminer.css https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css
  *
  * powershell:
- * Invoke-WebRequest -Uri "https://github.com/srvictorbatista/AdminerPMA/adminer.css" -OutFile "adminer.css
+ * Invoke-WebRequest -Uri "https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css" -OutFile "adminer.css"
  *
  * 2. Pronto! Desfrute de um visual escuro, moderno e insprado no PhpMyAdmin.
  * 
