@@ -18,8 +18,9 @@ Este projeto foi concebido para falantes da língua portuguesa no Brasil.
 ## COMO UTILIZAR:
 
 1. Baixe o arquivo **adminer.css** (Pretty My Adminer) e coloque-o no mesmo diretório do seu **Adminer.php**. A "mágica" ocorrerá automaticamente. Se preferir (em seu terminal), use o comando a seguir, a partir da pasta desejada:
-**bash:**  
-`` wget -O adminer.css https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css``
+```**bash**
+wget -O adminer.css https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css
+```
 
 	**powershell:**  
 	`` Invoke-WebRequest -Uri "https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css" -OutFile "adminer.css"``
