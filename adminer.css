@@ -557,8 +557,8 @@ form:has( table.layout) p *[type="submit"] {
     font-size: 20px;
 }
 
-
-
+.checkable .checked th, .checkable .checked th .column{background-color: #292957 !important;}
+table .checked, table .checked td{background: #0A0A1E !important;color:#EEE !important;font-size: 1.019em;}
 
 
 
