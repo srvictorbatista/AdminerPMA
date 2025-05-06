@@ -23,7 +23,7 @@ Este projeto foi concebido para falantes da língua portuguesa no Brasil.
 ```bash
 wget -O adminer.css https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css
 ```
-*CMD*
+**CMD**
 ```CMD
 powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css' -OutFile 'adminer.css'"
 ```
