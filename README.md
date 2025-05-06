@@ -25,12 +25,12 @@ wget -O adminer.css https://raw.githubusercontent.com/srvictorbatista/AdminerPMA
 ```
 **CMD:**
 ```CMD
-powershell -c "wget -O adminer.css https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css"
+powershell -c "wget -O 'adminer.css' 'https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css'"
 ```
 
 **powershell:** 
 ```powershell
-iwr https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css -o adminer.css"
+'iwr https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css' -o 'adminer.css'
 ```
 
 
