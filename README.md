@@ -38,7 +38,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/srvictorbatista/Admine
 <br> &nbsp; 
 ## AUTOR:
 
-**Autor:** Victor Batista  
+**Autor:** Sr. Victor Batista  
 **GitHub:** [https://github.com/srvictorbatista](https://github.com/srvictorbatista)  
 **LinkedIn:** [https://linkedin.com/in/levymac](https://linkedin.com/in/levymac)  
 **Contato no Telegram:** [@LevyMac](https://t.me/levymac)
