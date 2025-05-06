@@ -17,13 +17,13 @@ Este projeto foi concebido para falantes da língua portuguesa no Brasil.
 
 ## COMO UTILIZAR:
 
-1. Baixe o arquivo **adminer.css** (Pretty My Adminer) e coloque-o no mesmo diretório do seu **Adminer.php**. A "mágica" ocorrerá automaticamente. Se preferir (em seu terminal), use o comando a seguir, a partir da pasta desejada:
+1. Baixe o arquivo **adminer.css** (Pretty My Adminer) e coloque-o no mesmo diretório do seu **Adminer.php**. A "mágica" ocorrerá automaticamente. Se preferir (em seu terminal) use um dos comandos a seguir, a partir da pasta desejada:
 
 **bash:**
 ```bash
 wget -O adminer.css https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css
 ```
-**CMD**
+**CMD:**
 ```CMD
 powershell -c "iwr https://raw.githubusercontent.com/srvictorbatista/AdminerPMA/refs/heads/main/adminer.css -o adminer.css"
 ```
