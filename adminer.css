@@ -85,6 +85,7 @@ html {
 	--css-bg-color: #ffffe0;
 	--php-bg-color: #fff0f0;
 	--php-sql-bg-color: #ffbbb0;
+  color: #486f83;
 }
 
 #logo{display:none;}
